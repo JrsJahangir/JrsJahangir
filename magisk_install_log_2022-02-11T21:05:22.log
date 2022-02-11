@@ -1,0 +1,70 @@
+- Target image: /dev/block/mmcblk0p30
+- Device platform: arm64-v8a
+- Installing: 24.1 (24100)
+Parsing boot image: [/dev/block/mmcblk0p30]
+HEADER_VER      [2]
+KERNEL_SZ       [9258017]
+RAMDISK_SZ      [1282575]
+SECOND_SZ       [0]
+RECOV_DTBO_SZ   [0]
+DTB_SZ          [111892]
+OS_VERSION      [10.0.0]
+OS_PATCH_LEVEL  [2021-07]
+PAGESIZE        [2048]
+NAME            [CY-X682B-H694-A]
+CMDLINE         [bootopt=64S3,32N2,64N2 buildvariant=user]
+CHECKSUM        [b9ba232b2a5b59010f43016577ecde76eb174e59000000000000000000000000]
+- Unpacking boot image
+KERNEL_DTB_SZ   [111828]
+KERNEL_FMT      [gzip]
+RAMDISK_FMT     [gzip]
+- Checking ramdisk status
+Loading cpio: [ramdisk.cpio]
+- Magisk patched boot image detected
+Loading cpio: [ramdisk.cpio]
+Remove [overlay.d]
+Remove [overlay.d/sbin]
+Remove [overlay.d/sbin/magisk32.xz]
+Remove [overlay.d/sbin/magisk64.xz]
+Remove [.backup/.rmlist]
+Remove [.backup]
+Remove [.backup/.magisk]
+Move [.backup/init] -> [init]
+Dump cpio: [ramdisk.cpio]
+- Patching ramdisk
+Loading cpio: [ramdisk.cpio]
+Add entry [init] (0750)
+Create directory [overlay.d] (0750)
+Create directory [overlay.d/sbin] (0750)
+Add entry [overlay.d/sbin/magisk32.xz] (0644)
+Add entry [overlay.d/sbin/magisk64.xz] (0644)
+Patch with flag KEEPVERITY=[true] KEEPFORCEENCRYPT=[true]
+Loading cpio: [ramdisk.cpio.orig]
+Backup mismatch entry: [init] -> [.backup/init]
+Record new entry: [overlay.d] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin/magisk32.xz] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin/magisk64.xz] -> [.backup/.rmlist]
+Create directory [.backup] (0000)
+Add entry [.backup/.magisk] (0000)
+Dump cpio: [ramdisk.cpio]
+Loading dtbs from [dtb]
+Loading dtbs from [kernel_dtb]
+- Repacking boot image
+Parsing boot image: [/dev/block/mmcblk0p30]
+HEADER_VER      [2]
+KERNEL_SZ       [9258017]
+RAMDISK_SZ      [1282575]
+SECOND_SZ       [0]
+RECOV_DTBO_SZ   [0]
+DTB_SZ          [111892]
+OS_VERSION      [10.0.0]
+OS_PATCH_LEVEL  [2021-07]
+PAGESIZE        [2048]
+NAME            [CY-X682B-H694-A]
+CMDLINE         [bootopt=64S3,32N2,64N2 buildvariant=user]
+CHECKSUM        [b9ba232b2a5b59010f43016577ecde76eb174e59000000000000000000000000]
+KERNEL_DTB_SZ   [111828]
+KERNEL_FMT      [gzip]
+RAMDISK_FMT     [gzip]
+Repack to boot image: [new-boot.img]
